@@ -1,0 +1,186 @@
+allprojects {
+    repositories {
+        maven {
+            url 'http://repo.fusesource.com/maven2'
+        }
+        maven {
+            url 'http://repo.fusesource.com/maven2-snapshot'
+        }
+        maven {
+            url 'http://maven.onehippo.com/maven2/'
+        }
+        maven {
+            url 'http://maven.onehippo.com/maven2-forge/'
+        }
+        maven {
+            url 'http://maven.onehippo.com/maven2/'
+        }
+        maven {
+            url 'https://nexus.codehaus.org/content/repositories/releases/org/codehaus/mojo'
+        }
+        maven {
+            url 'http://download.java.net/maven/glassfish'
+        }
+        maven {
+            url 'http://nexus.openqa.org/content/repositories/releases'
+        }
+        maven {
+            url 'http://people.apache.org/repo/m2-snapshot-repository'
+        }
+        mavenCentral()
+    }
+}
+
+ext {
+    managedDependencies = [
+        'org.onehippo.cms7:hippo-cms7-commons': dependencies.create('org.onehippo.cms7:hippo-cms7-commons:1.02.04'),
+        'org.onehippo.cms7:hippo-services': dependencies.create('org.onehippo.cms7:hippo-services:1.02.03'),
+        'org.onehippo.cms7:hippo-cms7-utilities': dependencies.create('org.onehippo.cms7:hippo-cms7-utilities:1.01.03'),
+        'org.onehippo.cms7:hippo-repository-api': dependencies.create('org.onehippo.cms7:hippo-repository-api:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-builtin': dependencies.create('org.onehippo.cms7:hippo-repository-builtin:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-config': dependencies.create('org.onehippo.cms7:hippo-repository-config:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-connector': dependencies.create('org.onehippo.cms7:hippo-repository-connector:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-dependencies': dependencies.create('org.onehippo.cms7:hippo-repository-dependencies:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-engine': dependencies.create('org.onehippo.cms7:hippo-repository-engine:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-ldap': dependencies.create('org.onehippo.cms7:hippo-repository-ldap:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-modules': dependencies.create('org.onehippo.cms7:hippo-repository-modules:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-provider': dependencies.create('org.onehippo.cms7:hippo-repository-provider:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-workflow': dependencies.create('org.onehippo.cms7:hippo-repository-workflow:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-resources': dependencies.create('org.onehippo.cms7:hippo-repository-resources:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-servlets': dependencies.create('org.onehippo.cms7:hippo-repository-servlets:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-test': dependencies.create('org.onehippo.cms7:hippo-repository-test:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-testutils': dependencies.create('org.onehippo.cms7:hippo-repository-testutils:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-upgrade': dependencies.create('org.onehippo.cms7:hippo-repository-upgrade:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-utilities': dependencies.create('org.onehippo.cms7:hippo-repository-utilities:2.24.07'),
+        'org.onehippo.cms7:hippo-repository-deprecated-translation': dependencies.create('org.onehippo.cms7:hippo-repository-deprecated-translation:2.24.07'),
+        'org.onehippo.cms7:hippo-addon-wfdropbox': dependencies.create('org.onehippo.cms7:hippo-addon-wfdropbox:2.24.07'),
+        'org.onehippo.cms7:hippo-cms-api': dependencies.create('org.onehippo.cms7:hippo-cms-api:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-types': dependencies.create('org.onehippo.cms7:hippo-cms-types:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-jquery': dependencies.create('org.onehippo.cms7:hippo-cms-jquery:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-perspectives': dependencies.create('org.onehippo.cms7:hippo-cms-perspectives:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-builtin': dependencies.create('org.onehippo.cms7:hippo-cms-builtin:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-config': dependencies.create('org.onehippo.cms7:hippo-cms-config:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-editor-common': dependencies.create('org.onehippo.cms7:hippo-cms-editor-common:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-editor-frontend': dependencies.create('org.onehippo.cms7:hippo-cms-editor-frontend:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-editor-repository': dependencies.create('org.onehippo.cms7:hippo-cms-editor-repository:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-editor-test': dependencies.create('org.onehippo.cms7:hippo-cms-editor-test:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-engine': dependencies.create('org.onehippo.cms7:hippo-cms-engine:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-gallery-frontend': dependencies.create('org.onehippo.cms7:hippo-cms-gallery-frontend:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-gallery-repository': dependencies.create('org.onehippo.cms7:hippo-cms-gallery-repository:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-gotolink': dependencies.create('org.onehippo.cms7:hippo-cms-gotolink:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-console-frontend': dependencies.create('org.onehippo.cms7:hippo-cms-console-frontend:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-console-repository': dependencies.create('org.onehippo.cms7:hippo-cms-console-repository:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-reporting-frontend': dependencies.create('org.onehippo.cms7:hippo-cms-reporting-frontend:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-reporting-repository': dependencies.create('org.onehippo.cms7:hippo-cms-reporting-repository:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-search': dependencies.create('org.onehippo.cms7:hippo-cms-search:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-skin': dependencies.create('org.onehippo.cms7:hippo-cms-skin:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-test': dependencies.create('org.onehippo.cms7:hippo-cms-test:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-tools-development-content': dependencies.create('org.onehippo.cms7:hippo-cms-tools-development-content:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-tools-eclipse': dependencies.create('org.onehippo.cms7:hippo-cms-tools-eclipse:2.24.04'),
+        'org.onehippo.cms7:translation-runner': dependencies.create('org.onehippo.cms7:translation-runner:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-tools-upgrade': dependencies.create('org.onehippo.cms7:hippo-cms-tools-upgrade:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-translation-common': dependencies.create('org.onehippo.cms7:hippo-cms-translation-common:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-translation-repository': dependencies.create('org.onehippo.cms7:hippo-cms-translation-repository:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-translation-frontend': dependencies.create('org.onehippo.cms7:hippo-cms-translation-frontend:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-translation-test': dependencies.create('org.onehippo.cms7:hippo-cms-translation-test:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-upgrade': dependencies.create('org.onehippo.cms7:hippo-cms-upgrade:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-versioning': dependencies.create('org.onehippo.cms7:hippo-cms-versioning:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-workflowmenu': dependencies.create('org.onehippo.cms7:hippo-cms-workflowmenu:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-richtext-frontend': dependencies.create('org.onehippo.cms7:hippo-cms-richtext-frontend:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-richtext-repository': dependencies.create('org.onehippo.cms7:hippo-cms-richtext-repository:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-richtext-resources': dependencies.create('org.onehippo.cms7:hippo-cms-richtext-resources:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-richtext-test': dependencies.create('org.onehippo.cms7:hippo-cms-richtext-test:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-surf-frontend': dependencies.create('org.onehippo.cms7:hippo-cms-surf-frontend:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-surf-repository': dependencies.create('org.onehippo.cms7:hippo-cms-surf-repository:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-automatic-export-frontend': dependencies.create('org.onehippo.cms7:hippo-cms-automatic-export-frontend:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-automatic-export-repository': dependencies.create('org.onehippo.cms7:hippo-cms-automatic-export-repository:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-workflow-frontend': dependencies.create('org.onehippo.cms7:hippo-cms-workflow-frontend:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-workflow-repository': dependencies.create('org.onehippo.cms7:hippo-cms-workflow-repository:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-brokenlinks-frontend': dependencies.create('org.onehippo.cms7:hippo-cms-brokenlinks-frontend:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-brokenlinks-repository': dependencies.create('org.onehippo.cms7:hippo-cms-brokenlinks-repository:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-brokenlinks-common': dependencies.create('org.onehippo.cms7:hippo-cms-brokenlinks-common:2.24.04'),
+        'org.onehippo.cms7:hippo-cms-google-analytics-frontend': dependencies.create('org.onehippo.cms7:hippo-cms-google-analytics-frontend:2.24.04'),
+        'org.onehippo.cms7:hippo-addon-hst-configuration-editor-frontend': dependencies.create('org.onehippo.cms7:hippo-addon-hst-configuration-editor-frontend:1.11.04'),
+        'org.onehippo.cms7:hippo-addon-hst-configuration-editor-repository': dependencies.create('org.onehippo.cms7:hippo-addon-hst-configuration-editor-repository:1.11.04'),
+        'org.onehippo.cms7:hippo-addon-channel-manager-frontend-api': dependencies.create('org.onehippo.cms7:hippo-addon-channel-manager-frontend-api:2.24.05'),
+        'org.onehippo.cms7:hippo-addon-channel-manager-frontend': dependencies.create('org.onehippo.cms7:hippo-addon-channel-manager-frontend:2.24.05'),
+        'org.onehippo.cms7:hippo-addon-channel-manager-repository': dependencies.create('org.onehippo.cms7:hippo-addon-channel-manager-repository:2.24.05'),
+        'org.onehippo.cms7:hippo-search-service-api': dependencies.create('org.onehippo.cms7:hippo-search-service-api:1.01.00'),
+        'org.onehippo.cms7:hippo-search-service-commons': dependencies.create('org.onehippo.cms7:hippo-search-service-commons:1.01.00'),
+        'org.onehippo.cms7:hippo-search-service-jcr': dependencies.create('org.onehippo.cms7:hippo-search-service-jcr:1.01.00'),
+        'org.onehippo.cms7:hippo-package-app-dependencies': dependencies.create('org.onehippo.cms7:hippo-package-app-dependencies:2.24.01'),
+        'org.onehippo.cms7:hippo-package-cms-dependencies': dependencies.create('org.onehippo.cms7:hippo-package-cms-dependencies:2.24.01'),
+        'org.onehippo.cms7.hst:hst-api': dependencies.create('org.onehippo.cms7.hst:hst-api:2.26.05'),
+        'org.onehippo.cms7.hst:hst-rest-api': dependencies.create('org.onehippo.cms7.hst:hst-rest-api:2.26.05'),
+        'org.onehippo.cms7.hst:hst-client': dependencies.create('org.onehippo.cms7.hst:hst-client:2.26.05'),
+        'org.onehippo.cms7.hst.client-modules:hst-cms-rest': dependencies.create('org.onehippo.cms7.hst.client-modules:hst-cms-rest:2.26.05'),
+        'org.onehippo.cms7.hst.client-modules:hst-page-composer': dependencies.create('org.onehippo.cms7.hst.client-modules:hst-page-composer:2.26.05'),
+        'org.onehippo.cms7.hst.client-modules:hst-google-analytics-hst': dependencies.create('org.onehippo.cms7.hst.client-modules:hst-google-analytics-hst:2.26.05'),
+        'org.onehippo.cms7.hst.client-modules:hst-google-analytics-repository': dependencies.create('org.onehippo.cms7.hst.client-modules:hst-google-analytics-repository:2.26.05'),
+        'org.onehippo.cms7.hst:hst-commons': dependencies.create('org.onehippo.cms7.hst:hst-commons:2.26.05'),
+        'org.onehippo.cms7.hst.components:hst-core': dependencies.create('org.onehippo.cms7.hst.components:hst-core:2.26.05'),
+        'org.onehippo.cms7.hst.components:hst-jaxrs': dependencies.create('org.onehippo.cms7.hst.components:hst-jaxrs:2.26.05'),
+        'org.onehippo.cms7.hst.components:hst-resourcebundle': dependencies.create('org.onehippo.cms7.hst.components:hst-resourcebundle:2.26.05'),
+        'org.onehippo.cms7.hst.components:hst-resourcebundle-cnd': dependencies.create('org.onehippo.cms7.hst.components:hst-resourcebundle-cnd:2.26.05'),
+        'org.onehippo.cms7.hst.components:hst-rewriter': dependencies.create('org.onehippo.cms7.hst.components:hst-rewriter:2.26.05'),
+        'org.onehippo.cms7.hst.components:hst-security': dependencies.create('org.onehippo.cms7.hst.components:hst-security:2.26.05'),
+        'org.onehippo.cms7.hst.components:hst-session-pool': dependencies.create('org.onehippo.cms7.hst.components:hst-session-pool:2.26.05'),
+        'org.onehippo.cms7.hst:hst-content-beans': dependencies.create('org.onehippo.cms7.hst:hst-content-beans:2.26.05'),
+        'org.onehippo.cms7.hst.dependencies:hst-cms-dependencies': dependencies.create('org.onehippo.cms7.hst.dependencies:hst-cms-dependencies:2.26.05'),
+        'org.onehippo.cms7.hst.dependencies:hst-repository-dependencies': dependencies.create('org.onehippo.cms7.hst.dependencies:hst-repository-dependencies:2.26.05'),
+        'org.onehippo.cms7.hst.dependencies:hst-client-dependencies': dependencies.create('org.onehippo.cms7.hst.dependencies:hst-client-dependencies:2.26.05'),
+        'org.onehippo.cms7.hst.dependencies:hst-server-dependencies': dependencies.create('org.onehippo.cms7.hst.dependencies:hst-server-dependencies:2.26.05'),
+        'org.onehippo.cms7.hst.dependencies:hst-spring-dependencies': dependencies.create('org.onehippo.cms7.hst.dependencies:hst-spring-dependencies:2.26.05'),
+        'org.onehippo.cms7.hst:hst-mock': dependencies.create('org.onehippo.cms7.hst:hst-mock:2.26.05'),
+        'org.onehippo.cms7.hst.sandbox:hst-ocm': dependencies.create('org.onehippo.cms7.hst.sandbox:hst-ocm:2.26.05'),
+        'org.onehippo.cms7.hst:hst-test': dependencies.create('org.onehippo.cms7.hst:hst-test:2.26.05'),
+        'org.onehippo.cms7.hst.toolkit-resources.addon:hst-addon-repository': dependencies.create('org.onehippo.cms7.hst.toolkit-resources.addon:hst-addon-repository:2.26.05'),
+        'org.onehippo.cms7.hst.toolkit-resources.addon.toolkit-cnd:hst-addon-cnd': dependencies.create('org.onehippo.cms7.hst.toolkit-resources.addon.toolkit-cnd:hst-addon-cnd:2.26.05'),
+        'org.onehippo.cms7.hst.toolkit-resources.addon:hst-addon-unittestcontents': dependencies.create('org.onehippo.cms7.hst.toolkit-resources.addon:hst-addon-unittestcontents:2.26.05'),
+        'org.onehippo.forge:dashboard-document-wizard': dependencies.create('org.onehippo.forge:dashboard-document-wizard:1.03.11'),
+        'org.onehippo.forge:easy-forms-cms': dependencies.create('org.onehippo.forge:easy-forms-cms:2.12.11'),
+        'org.onehippo.forge:easy-forms-hst': dependencies.create('org.onehippo.forge:easy-forms-hst:2.12.11') {
+            exclude group: 'com.google.guava', module: 'guava'
+        },
+        'org.onehippo.forge:easy-forms-repository': dependencies.create('org.onehippo.forge:easy-forms-repository:2.12.11'),
+        'org.onehippo.addon.frontend.gallerypicker:gallerypicker': dependencies.create('org.onehippo.addon.frontend.gallerypicker:gallerypicker:1.11.01'),
+        'org.onehippo.forge.poll:poll-addon-repository': dependencies.create('org.onehippo.forge.poll:poll-addon-repository:1.06.01'),
+        'org.onehippo.forge.poll:poll-hst-client': dependencies.create('org.onehippo.forge.poll:poll-hst-client:1.06.01'),
+        'org.onehippo.forge:relateddocs': dependencies.create('org.onehippo.forge:relateddocs:2.08.09'),
+        'org.onehippo.forge.selectionplugins:selectionplugins-addon-repository': dependencies.create('org.onehippo.forge.selectionplugins:selectionplugins-addon-repository:2.06.03'),
+        'org.onehippo.forge.selectionplugins:selectionplugins-addon-cms': dependencies.create('org.onehippo.forge.selectionplugins:selectionplugins-addon-cms:2.06.03'),
+        'org.onehippo.forge.selectionplugins:selectionplugins-hst-client': dependencies.create('org.onehippo.forge.selectionplugins:selectionplugins-hst-client:2.06.03'),
+        'org.onehippo.forge.sitemap:sitemap-content': dependencies.create('org.onehippo.forge.sitemap:sitemap-content:1.04.00'),
+        'org.onehippo.forge.sitemap:sitemap-component': dependencies.create('org.onehippo.forge.sitemap:sitemap-component:1.04.00'),
+        'org.onehippo:taxonomy-api': dependencies.create('org.onehippo:taxonomy-api:1.09.03'),
+        'org.onehippo:taxonomy-addon-frontend': dependencies.create('org.onehippo:taxonomy-addon-frontend:1.09.03'),
+        'org.onehippo:taxonomy-addon-repository': dependencies.create('org.onehippo:taxonomy-addon-repository:1.09.03'),
+        'org.onehippo:taxonomy-hst-api': dependencies.create('org.onehippo:taxonomy-hst-api:1.09.03'),
+        'org.onehippo:taxonomy-hstclient': dependencies.create('org.onehippo:taxonomy-hstclient:1.09.03'),
+        'org.onehippo.forge:tcmp-addon-frontend': dependencies.create('org.onehippo.forge:tcmp-addon-frontend:1.07.00'),
+        'org.onehippo.forge:tcmp-addon-repository': dependencies.create('org.onehippo.forge:tcmp-addon-repository:1.07.00'),
+        'org.onehippo.forge:tcmp-component': dependencies.create('org.onehippo.forge:tcmp-component:1.07.00'),
+        'org.onehippo.forge:content-blocks': dependencies.create('org.onehippo.forge:content-blocks:1.09.02'),
+        'org.onehippo.forge:ecm-tagging': dependencies.create('org.onehippo.forge:ecm-tagging:4.05.01'),
+        'org.onehippo.forge.properties:properties-addon-repository': dependencies.create('org.onehippo.forge.properties:properties-addon-repository:2.08.00'),
+        'org.onehippo.forge.properties:properties-hst-client': dependencies.create('org.onehippo.forge.properties:properties-hst-client:2.08.00'),
+        'org.onehippo.forge.robotstxt:robotstxt-addon-repository': dependencies.create('org.onehippo.forge.robotstxt:robotstxt-addon-repository:1.06.00'),
+        'org.onehippo.forge.robotstxt:robotstxt-hst-client': dependencies.create('org.onehippo.forge.robotstxt:robotstxt-hst-client:1.06.00'),
+        'javax.servlet:servlet-api': dependencies.create('javax.servlet:servlet-api:2.5'),
+        'org.apache.geronimo.specs:geronimo-jta_1.1_spec': dependencies.create('org.apache.geronimo.specs:geronimo-jta_1.1_spec:1.1'),
+        'xml-apis:xml-apis': dependencies.create('xml-apis:xml-apis:1.0.b2'),
+        'javax.jcr:jcr': dependencies.create('javax.jcr:jcr:2.0'),
+        'javax.jdo:jdo2-api': dependencies.create('javax.jdo:jdo2-api:2.3-eb') {
+            exclude group: 'javax.transaction', module: 'transaction-api'
+        },
+        'javax.mail:mail': dependencies.create('javax.mail:mail:1.4.4'),
+        'org.apache.geronimo.specs:geronimo-javamail_1.4_spec': dependencies.create('org.apache.geronimo.specs:geronimo-javamail_1.4_spec:1.7.1'),
+        'org.slf4j:slf4j-api': dependencies.create('org.slf4j:slf4j-api:1.6.4'),
+        'org.slf4j:jcl-over-slf4j': dependencies.create('org.slf4j:jcl-over-slf4j:1.6.4'),
+        'org.slf4j:slf4j-log4j12': dependencies.create('org.slf4j:slf4j-log4j12:1.6.4'),
+        'log4j:log4j': dependencies.create('log4j:log4j:1.2.16'),
+        'commons-logging:commons-logging': dependencies.create('commons-logging:commons-logging:1.1.1'),
+        'commons-logging:commons-logging-api': dependencies.create('commons-logging:commons-logging-api:1.1'),
+        'com.google.guava:guava': dependencies.create('com.google.guava:guava:12.0.1')
+    ]
+}

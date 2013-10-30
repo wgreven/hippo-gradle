@@ -1,0 +1,49 @@
+apply plugin: 'war'
+apply plugin: 'cargo'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'org.gradle.api.plugins:gradle-cargo-plugin:0.6.1'
+    }
+}
+
+dependencies {
+    runtime managedDependencies['org.onehippo.cms7.hst.dependencies:hst-server-dependencies']
+    runtime managedDependencies['org.onehippo.cms7.hst.dependencies:hst-cms-dependencies']
+    runtime managedDependencies['org.onehippo.cms7:hippo-package-cms-dependencies']
+    runtime managedDependencies['org.onehippo.cms7:hippo-addon-channel-manager-frontend']
+    runtime managedDependencies['org.onehippo.cms7:hippo-addon-channel-manager-repository']
+    runtime project(':bootstrap:configuration')
+    runtime project(':bootstrap:content')
+    runtime managedDependencies['org.onehippo.addon.frontend.gallerypicker:gallerypicker']
+            .copy()
+            .exclude(group: 'org.apache.wicket', module: 'wicket')
+}
+
+cargo {
+    containerId = 'tomcat6x'
+    port = 9090
+
+    deployable {
+        context = 'myhippoproject'
+    }
+
+    remote {
+        hostname = 'cloud.internal.it'
+        username = 'superuser'
+        password = 'secretpwd'
+    }
+
+    local {
+        homeDir = file('/home/user/dev/tools/apache-tomcat-6.0.32')
+        output = file('build/output.log')
+
+        tomcat {
+            ajpPort = 9091
+        }
+    }
+}

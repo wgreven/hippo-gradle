@@ -1,0 +1,10 @@
+<'hippogradle'='http://www.onehippo.org/hippogradle/nt/1.0'>
+<'hippo'='http://www.onehippo.org/jcr/hippo/nt/2.0'>
+<'hippostd'='http://www.onehippo.org/jcr/hippostd/nt/2.0'>
+<'hippostdpubwf'='http://www.onehippo.org/jcr/hippostdpubwf/nt/1.0'>
+
+[hippogradle:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document orderable
+
+[hippogradle:textdocument] > hippogradle:basedocument, hippostd:relaxed
+
+[hippogradle:newsdocument] > hippogradle:basedocument, hippostd:relaxed
